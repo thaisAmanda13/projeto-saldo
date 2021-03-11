@@ -17,14 +17,13 @@ class CreateHistoricsTable extends Migration
         Schema::create('historics', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('user_id');
+            $table->bigInteger('user_id')->unsigned();
             $table->enum('type',['I', 'O', 'T']);
             $table->double('amount',10,2);
             $table->double('total_before', 10,2);
             $table->double('total_after',10,2);
             $table->integer('user_id_transaction')->nullable();  
             $table->date('date');
-            
             $table->foreign('user_id')->references('id')->on('users')->ondelete('cascade');
 
         });
