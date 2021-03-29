@@ -5,3 +5,9 @@ Possui as seguintes tabelas:
 - Balance;
 - Historic;
 - User;
+### Features
+
+- [x] Cadastro de usuário
+- [x] Login
+- [x] view de login
+- [ ] view cadastro
